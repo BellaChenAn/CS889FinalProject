@@ -28,8 +28,8 @@ unsigned int remotePort = 6666;
 
 // Set WiFi setting
 const char * udpAddress = "172.20.10.3";
-const char * networkName = "AttentionGo";
-const char * networkPswd = "124456789";
+const char * networkName = "Your WIFIname";
+const char * networkPswd = "Your WIFI Password";
 
 // Variables 
 int32_t touchValue1, touchValueLast1;
