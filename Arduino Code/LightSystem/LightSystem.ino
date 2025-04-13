@@ -20,14 +20,14 @@ const int group2[] = {
 unsigned long lastGroup1Time = 0;
 unsigned long lastGroup2Time = 0;
 
-bool group1State = false;  // 用于记录当前是否亮着
-const unsigned long group1Interval = 1000;  // 1 秒闪烁一次
-const unsigned long group2Interval = 4000;  // 每 4 秒亮一次
+bool group1State = false;  // Indicates whether group1 LEDs are currently on
+const unsigned long group1Interval = 1000;  // Blink every 1 second
+const unsigned long group2Interval = 4000;  // Light up once every 4 seconds
 
 void setup() {
   Serial.begin(115200);
 
-  // 设置所有引脚为输出
+  // Set all pins as output
   pinMode(LED_PIN1, OUTPUT);
   pinMode(LED_PIN2, OUTPUT);
   pinMode(LED_PIN3, OUTPUT);
@@ -41,18 +41,18 @@ void setup() {
   pinMode(LED_PIN11, OUTPUT);
   pinMode(LED_PIN12, OUTPUT);
 
-  // 初始化所有 LED 为关闭状态
+  // Initialize all LEDs to off
   for (int i = 1; i <= 12; i++) {
     digitalWrite(i, LOW);
   }
 
-  randomSeed(analogRead(0));  // 初始化随机数种子
+  randomSeed(analogRead(0));  // Initialize random seed
 }
 
 void loop() {
   unsigned long currentTime = millis();
 
-  // group1 每 1 秒闪一次
+  // group1 blinks every 1 second
   if (currentTime - lastGroup1Time >= group1Interval) {
     group1State = !group1State;
     for (int i = 0; i < 3; i++) {
@@ -61,13 +61,13 @@ void loop() {
     lastGroup1Time = currentTime;
   }
 
-  // group2 每 4 秒随机亮一个灯
+  // group2 randomly lights up one LED every 4 seconds
   if (currentTime - lastGroup2Time >= group2Interval) {
     int randomIndex = random(0, sizeof(group2) / sizeof(group2[0]));
     int selectedPin = group2[randomIndex];
 
     digitalWrite(selectedPin, HIGH);
-    delay(200);  // 亮 200 毫秒
+    delay(200);  // Stay on for 200 milliseconds
     digitalWrite(selectedPin, LOW);
 
     lastGroup2Time = currentTime;
