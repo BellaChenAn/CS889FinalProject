@@ -1,5 +1,17 @@
 # CS889FinalProject
 This is the source code for the CS889 final project, which you can review directly. However, to fully reproduce the project, you’ll need to install Unity, Max, and Arduino, as well as have hardware support. I have also created an alternative version that does not require any hardware and can be operated using only a computer keyboard.
+# Framework of Code & How to run the program?
+-Source code
+ |_Unity Code (Providing Google Drive link, Download and run in Unity 2021.3.45f1)
+ |_ Max Code (Source code provided)
+ |_ Arudino Code (Source code provided, Connect the wires according to the instructions in the README.)
+
+ 
+-Alternative code
+ |- Untiy Code (Providing Google Drive link, Download and run in Unity 2021.3.45f1)
+ |_ Standalone App (Double clink to run)
+
+
 
 # To replicate this project, please make sure to install and purchase the following software and hardware:
 Software：
