@@ -4,6 +4,8 @@ Source code (Hardware Required) -3.5GB:
 https://drive.google.com/drive/folders/1F8NoqiXG12z1Jcan5IZP4pfCkzFuAEzb?usp=share_link
 
 Alternative version (No Hardware Required) -3.5GB:
+Use keyboard to simulate the Hardware "drum pat"; 
+Press the "A","B","C"..."L" to play the drum. Press "A";"B";"C" = follow the light.
 Only IOS system supported:
 https://drive.google.com/drive/folders/1c9YUu0iRCQTeWbM0Lj3sTGIFJQ_AHLPS?usp=share_link
 
